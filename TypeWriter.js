@@ -15,7 +15,7 @@ class TypeWriter{
         if(typeof object !== 'string' && typeof object !== 'object') return console.error(`Invalid element! Element must be a string or an object.`);
         __typewriter_cuid = __typewriter_cuid + 1;
         this.id = __typewriter_cuid;
-        this.element = typeof object === 'object' ? object : document.querySelector(object);
+        this.element = typeof object === 'object' ? object : document.getElementById(object);
         if(!this.element) return console.error(`The element does not exists!`);
         this.save = [];
         this.options = options || {};
